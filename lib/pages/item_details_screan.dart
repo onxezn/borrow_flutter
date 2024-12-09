@@ -339,7 +339,7 @@ class _ItemDetailScreenState extends State<ItemDetailScreen> {
                     itemDetails!.name,
                     style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                   ),
-                  if (itemDetails?.userId != globalUserId)
+                  if (itemDetails?.userId != BigInt.from(globalUserId ?? 0))
                     IconButton(
                       icon: Icon(
                         isLiked ? Icons.favorite : Icons.favorite_border,
